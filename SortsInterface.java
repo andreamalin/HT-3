@@ -7,6 +7,8 @@
 *Interfaz tomada de: Bailey, D. A. Java Structures: Data Structures for the Principled Programmer.
 *@author Andrea Amaya #19357
 **********************************************************/
+import java.util.ArrayList;
+
 public interface SortsInterface{
 	/**
 	Pre: Datos a ordenar
@@ -14,32 +16,5 @@ public interface SortsInterface{
 	* @param cantidad_datos Cantidad de datos a ordenar
 	Post: Datos ordenados
 	*/
-	public abstract void selectionSort(int[] datos, int cantidad_datos);
-	/**
-	Pre: Datos a ordenar
-	* @param datos 			Es el array con los datos a ordenar
-	* @param cantidad_datos Cantidad de datos a ordenar
-	Post: Datos ordenados
-	*/
-	public abstract void mergeSort(int[] datos, int cantidad_datos);
-	/**
-	Pre: Datos a ordenar
-	* @param datos 			Es el array con los datos a ordenar
-	* @param cantidad_datos Cantidad de datos a ordenar
-	Post: Datos ordenados
-	*/
-	public abstract void quickSort(int[] datos, int cantidad_datos);
-	/**
-	Pre: Datos a ordenar
-	* @param datos 			Es el array con los datos a ordenar
-	Post: Datos ordenados
-	*/
-	public abstract void radixSort(int[] datos);
-	/**
-	Pre: Datos a ordenar
-	* @param datos 			Es el array con los datos a ordenar
-	* @param cantidad_datos Cantidad de datos a ordenar
-	Post: Datos ordenados
-	*/
-	public abstract void bubbleSort(int datos[], int cantidad_datos);
+	public ArrayList<Comparable> sorting(ArrayList<Comparable> datos, int cantidad_datos);
 }
