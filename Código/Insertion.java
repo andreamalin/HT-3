@@ -1,5 +1,5 @@
 /**********************************************************
-*Sorts.java				Fecha de creación: 01/01/2020
+*Insertion.java				Fecha de creación: 01/01/2020
 *						Última fecha de modificación: 10/01/2020
 *							
 *Clase que implementa las funciones del Sort Insertion

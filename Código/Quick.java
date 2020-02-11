@@ -18,7 +18,11 @@ public class Quick implements SortsInterface{
 		return datos;
 	}
 
-
+	/**
+	* @param datos 				Datos a ordenar
+	* @param izquierda 			Dato a la izquierda
+	* @param derecha 			Dato a la derecha
+	*/
 	//Se ordenan los datos en orden ascendente
 	private static void quickSortRecursive(ArrayList<Comparable> datos, int izquierda, int derecha){
 		int pivote; //La ultima posicion del valor derecho
@@ -30,6 +34,11 @@ public class Quick implements SortsInterface{
 		quickSortRecursive(datos, pivote+1, derecha); //Ordena al mayor
 	}
 
+	/**
+	* @param datos 				Datos a ordenar
+	* @param izquierda 			Dato a la izquierda
+	* @param derecha 			Dato a la derecha
+	*/
 	//Se posiciona en el lugar correcto hacia la derecha
 	private static int partition(ArrayList<Comparable> datos, int izquierda, int derecha){
 		while (true) {
@@ -60,6 +69,11 @@ public class Quick implements SortsInterface{
 	}
 
 
+	/**
+	* @param datos 				Datos a ordenar
+	* @param a 					Se obtiene la posición de a, para asignar b
+	* @param b 					Se obtiene la posición de b, para asignar a
+	*/
 	/**
 	/ Código adaptado de: Bailey, D. A. Java Structures: Data Structures for the Principled Programmer. Página 109.
 	*/

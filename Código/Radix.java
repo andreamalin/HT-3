@@ -20,6 +20,10 @@ public class Radix implements SortsInterface{
 		}
 		return datos;
 	}
+	/**
+	* @param cantidad_datos 			Cantidad de datos a ordenar
+	* @param decimal 					Se devuelve el decimo lugar
+	*/
 	//Se regresa el valor del decimo lugar
 	private static int digit(int cantidad_datos, int decimal){
 		if (decimal == 0){
@@ -28,6 +32,12 @@ public class Radix implements SortsInterface{
 			return digit(cantidad_datos/10, decimal-1);
 		}
 	}
+
+	/**
+	* @param datos 				Datos a ordenar
+	* @param decimal 			Decimo lugar
+	* @param cantidad_datos 	Cantidad de datos a ordenar
+	*/
 	//Se ordenan los datos del digito encontrado en la localidad decimal
 	private static void bucketPass(ArrayList<Comparable> datos, int decimal, int cantidad_datos){
 		
@@ -50,13 +60,9 @@ public class Radix implements SortsInterface{
 		int i = cantidad_datos;
 
 		for (int j=9; j >= 0; j--) {
-			i--;
 			while (!casillero.get(j).isEmpty()){
 				i--;
-				int remover = casillero.size()-1;
-
-
-				valor = new Comparable(casillero.get(j).lastElement());
+				valor = new Comparable(casillero.get(j).remove(casillero.get(j).size() - 1));
 				datos.set(i, valor);
 			}
 		}

@@ -33,7 +33,11 @@ public class Selection implements SortsInterface{
 		return datos;
 	}
 
-
+	/**
+	* @param datos 				Datos a ordenar
+	* @param a 					Se obtiene la posición de a, para asignar b
+	* @param b 					Se obtiene la posición de b, para asignar a
+	*/
 	/**
 	/ Código adaptado de: Bailey, D. A. Java Structures: Data Structures for the Principled Programmer. Página 109.
 	*/
