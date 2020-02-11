@@ -14,6 +14,36 @@ public class Selection implements SortsInterface{
 	/**	
 	/ Código adaptado de: Bailey, D. A. Java Structures: Data Structures for the Principled Programmer. Página 127 - 128.
 	*/
-	
+	public ArrayList<Comparable> sorting(ArrayList<Comparable> datos, int cantidad_datos){
+		int cantidad_desordenada = cantidad_datos;
+		int indice;
+		int maximo;
+
+		while(cantidad_desordenada > 0){
+			maximo = 0; //El dato mayor se toma como cero
+			for (indice = 1; indice < cantidad_desordenada; indice++) {
+				if (datos.get(maximo).compareTo(datos.get(indice)) < 0) {
+					maximo = indice;
+				}
+			}
+			swap(datos, maximo, cantidad_desordenada-1);
+			cantidad_desordenada--;
+		}
+
+		return datos;
+	}
+
+
+	/**
+	/ Código adaptado de: Bailey, D. A. Java Structures: Data Structures for the Principled Programmer. Página 109.
+	*/
+	//Se cambian los datos 
+	private static void swap(ArrayList<Comparable> datos, int a, int b){
+		Comparable temporal;
+
+		temporal = datos.get(a);
+		datos.set(a, datos.get(b));
+		datos.set(b, temporal);
+	}
 
 }

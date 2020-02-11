@@ -7,6 +7,9 @@ public class driver{
 	public static void main(String[] args) {
 		SortsInterface insertion = new Insertion();
 		SortsInterface merge = new Merge();
+		SortsInterface selection = new Selection();
+		SortsInterface quick = new Quick();
+		SortsInterface radix = new Radix();
 
 
 		Random rand = new Random();
@@ -37,7 +40,7 @@ public class driver{
 		}
 
 
-		datos_ordenados = merge.sorting(datos, cantidad_aleatoria);
+		datos_ordenados = radix.sorting(datos, cantidad_aleatoria);
 
 		try {
 			PrintWriter not = new PrintWriter("ordenados.txt");
